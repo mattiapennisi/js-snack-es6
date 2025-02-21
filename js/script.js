@@ -1,6 +1,4 @@
 // Snack 1
-// Creare un array di oggetti: Ogni oggetto descriverà una bici da corsa con le seguenti proprietà: nome e peso.
-// Stampare a schermo la bici con peso minore.
 
 const bikes = [
     {
@@ -39,9 +37,58 @@ for (let i = 0; i < bikes.length; i++) {
 console.log(minorBike);
 
 // Snack2
-// Creare un array di oggetti di squadre di calcio.
-// Ogni squadra avrà diverse proprietà: nome, punti fatti, falli subiti.
-// Nome sarà l’unica proprietà da compilare, le altre saranno tutte settate a 0.
-// Generare numeri random al posto degli 0 nelle proprietà “punti” fatti e “falli subiti”.
 // Infine, creiamo un nuovo array i cui elementi contengono solo nomi e falli subiti e stampiamo tutto in console.
 
+const teams = [
+    {
+        name: 'Milan',
+        score: 0,
+        fouls: 0
+    },
+    {
+        name: 'Barcelona',
+        score: 0,
+        fouls: 0
+    },
+    {
+        name: 'Liverpool',
+        score: 0,
+        fouls: 0
+    },
+    {
+        name: 'Psg',
+        score: 0,
+        fouls: 0
+    },
+    {
+        name: 'Bayern',
+        score: 0,
+        fouls: 0
+    }
+]
+
+function generatesRandomNumber(n) {
+    let randomNumber = Number(Math.floor(Math.random() * n + 1))
+
+    return randomNumber
+}
+
+for (let i = 0; i < teams.length; i++) {
+    teams[i].score = generatesRandomNumber(10)
+    teams[i].fouls = generatesRandomNumber(10)
+}
+
+console.log(teams)  
+
+let teamsLessScore = []
+
+for (let i = 0; i < teams.length; i++) {
+    let teamsLessScoreObject = {
+        name: teams[i].name,
+        fouls: teams[i].fouls
+    }
+
+    teamsLessScore.push(teamsLessScoreObject)
+}
+
+console.log(teamsLessScore)
