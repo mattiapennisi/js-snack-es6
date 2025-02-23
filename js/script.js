@@ -37,7 +37,6 @@ for (let i = 0; i < bikes.length; i++) {
 console.log(minorBike);
 
 // Snack2
-// Infine, creiamo un nuovo array i cui elementi contengono solo nomi e falli subiti e stampiamo tutto in console.
 
 const teams = [
     {
